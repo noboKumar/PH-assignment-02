@@ -39,17 +39,17 @@ ul {
   font-size: 1.25rem;
   font-weight: 500;
 }
-.home-txt{
-    color: rgb(254, 163, 1);
+.home-txt {
+  color: rgb(254, 163, 1);
 }
-.about-txt{
-    color: rgb(1, 172, 253);
+.about-txt {
+  color: rgb(1, 172, 253);
 }
-.facilities-txt{
-    color: rgb(5, 212, 223);
+.facilities-txt {
+  color: rgb(5, 212, 223);
 }
-.admission-txt{
-    color: rgb(93, 88, 239);
+.admission-txt {
+  color: rgb(93, 88, 239);
 }
 .btn-primary {
   padding: 10px;
@@ -63,27 +63,69 @@ ul {
   border: none;
   cursor: pointer;
 }
-hr{
-    border: 0.5px solid rgb(254, 163, 1);
-    visibility: hidden;
+hr {
+  border: 0.5px solid rgb(254, 163, 1);
+  visibility: hidden;
 }
-.bar-icon{
-    visibility: hidden;
+.bar-icon {
+  visibility: hidden;
 }
+/* banner-section */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-content{
+    width: 640px; 
+}
+.banner-content h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(17, 17, 17);
+  margin-bottom: 24px;
+}
+.banner-content p{
+    color: rgb(17, 17, 17);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+.btn-secondary{
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 10px;
+    width: 197px;
+    background: rgb(17, 17, 17);
+    border: none;
+    cursor: pointer;
+}
+.yellow-txt{
+    color: rgb(254, 163, 1);
+}
+.blue-txt{
+    color: rgb(1, 172, 253);
+}
+
+
+
+
 /* <----mobile device----> */
-@media only screen and (max-width:576px){
-    nav{
-        padding: 12px 16px;
-    }
-    .logo-container h2,
-    .menu{
-        display: none;
-    }
-    hr{
-        visibility: visible;
-    }
-    .bar-icon{
-        visibility: visible;
-        font-size: 1.8rem;
-    }
+@media only screen and (max-width: 576px) {
+  nav {
+    padding: 12px 16px;
+  }
+  .logo-container h2,
+  .menu {
+    display: none;
+  }
+  hr {
+    visibility: visible;
+  }
+  .bar-icon {
+    visibility: visible;
+    font-size: 1.8rem;
+  }
 }
