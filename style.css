@@ -212,6 +212,33 @@ hr {
   cursor: pointer;
   margin-right: 10px;
 }
+.arrow-btn-container{
+  margin-bottom: 30px;
+}
+.marquee{
+  width: calc(100% - 2px);
+  background-color: rgba(48, 48, 48, 0.349);
+  color: rgb(88, 88, 88);
+  font-weight: 500;
+  padding: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.marquee span{
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee{
+  0%{
+    transform: translateX(100vw);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+
 
 
 
