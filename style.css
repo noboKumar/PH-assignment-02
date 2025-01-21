@@ -153,7 +153,7 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  padding: 60px 0;
+  padding-top: 60px;
 }
 .curriculum-box-container {
   display: flex;
@@ -250,60 +250,63 @@ hr {
 }
 
 /* stories section */
-.stories-section{
+.stories-section {
   text-align: center;
-  background: url(./assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+  background: url(./assets/bg.png),
+    linear-gradient(0deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
-.stories-content h1{
+.stories-content h1 {
   color: rgb(0, 0, 0);
   font-size: 2.875rem;
   font-weight: 700;
   margin-bottom: 80px;
 }
-.stories-box-container{
+.stories-box-container {
   display: grid;
   gap: 20px;
-  grid-template-areas: 
-  "a a b c"
-  "a a d e";
+  grid-template-areas:
+    "a a b c"
+    "a a d e";
   justify-content: center;
   margin-bottom: 8%;
 }
-#stories-box1{
+#stories-box1 {
   grid-area: a;
 }
-#stories-box2{
+#stories-box2 {
   grid-area: b;
 }
-#stories-box3{
+#stories-box3 {
   grid-area: c;
 }
-#stories-box4{
+#stories-box4 {
   grid-area: d;
 }
-#stories-box5{
+#stories-box5 {
   grid-area: e;
 }
-.stories-box{
+.stories-box {
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
   text-align: left;
   box-sizing: border-box;
   width: 100%;
 }
-.stories-box img{
-  border-radius: 16px 16px 0 0 ;
+.stories-box img {
+  border-radius: 16px 16px 0 0;
   width: 100%;
 }
-.stories-box-content{
+.stories-box-content {
   padding-left: 30px;
 }
-.stories-box-content h1{
+.stories-box-content h1 {
   color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 700;
 }
-.stories-box-content p{
+.stories-box-content p {
   color: rgb(102, 102, 102);
   font-family: "Raleway";
   font-size: 1.2rem;
@@ -311,10 +314,10 @@ hr {
   margin-top: 50px;
   line-height: 28.76px;
 }
-.stories-box-content h3{
+.stories-box-content h3 {
   padding-bottom: 20px;
 }
-.date-btn{
+.date-btn {
   border-radius: 47.93px;
   color: rgb(255, 255, 255);
   font-family: "Raleway";
@@ -323,55 +326,106 @@ hr {
   padding: 10px 18px 10px 18px;
   border: none;
 }
-#stories-box1 .date-btn{
+#stories-box1 .date-btn {
   background-color: rgb(60, 216, 232);
   position: relative;
   top: -3%;
   right: -6%;
 }
-#stories-box2 .date-btn{
+#stories-box2 .date-btn {
   background-color: rgb(149, 178, 38);
   position: relative;
   top: -5%;
   right: -8%;
 }
-#stories-box3 .date-btn{
+#stories-box3 .date-btn {
   background-color: rgb(93, 88, 240);
   position: relative;
   top: -6%;
   right: -8%;
 }
-#stories-box4 .date-btn{
+#stories-box4 .date-btn {
   background-color: rgb(149, 178, 38);
   position: relative;
   top: -6%;
   right: -8%;
 }
-#stories-box5 .date-btn{
+#stories-box5 .date-btn {
   background-color: rgb(149, 178, 38);
   position: relative;
   top: -6%;
   right: -8%;
 }
-
-
-
-
-
-
-
-
-
+/* footer-section */
+footer {
+  background: rgb(1, 172, 253);
+}
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 110px 0 110px 0;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-logo h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2.6338rem;
+  font-weight: 700;
+}
+.footer-head p {
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 400;
+  width: 400px;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about h1 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 700;
+}
+.about li {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 500;
+}
+.about-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 0;
+}
+.social h1 {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-weight: 700;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /* <----mobile device----> */
 @media only screen and (max-width: 576px) {
   nav,
   .banner,
   .curriculum-box-container,
-  .stories-section {
+  .stories-section,
+  footer {
     padding: 12px 16px;
   }
-  .curriculum-box-container {
+  .curriculum-box-container,
+  .footer-container {
     flex-direction: column;
   }
   .banner {
@@ -382,6 +436,9 @@ hr {
     width: 100%;
   }
   .banner-content h1 {
+    width: 100%;
+  }
+  .footer-head p {
     width: 100%;
   }
   .logo-container h2,
@@ -396,15 +453,15 @@ hr {
     visibility: visible;
     font-size: 1.8rem;
   }
-  #stories-box1{
+  #stories-box1 {
     display: none;
   }
-  .stories-box-container{
-    grid-template-areas: 
-    "b c"
-    "d e";
+  .stories-box-container {
+    grid-template-areas:
+      "b c"
+      "d e";
   }
-  .date-btn{
+  .date-btn {
     padding: 5px 9px 5px 9px;
   }
 }
