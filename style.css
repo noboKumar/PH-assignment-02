@@ -7,7 +7,8 @@ body {
 /* header-section */
 header,
 .curriculum-content,
-.curriculum-box-container{
+.curriculum-box-container,
+.stories {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -154,14 +155,15 @@ hr {
   background-size: contain;
   padding: 60px 0;
 }
-.curriculum-box-container{
+.curriculum-box-container {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   gap: 28px;
   margin-bottom: 80px;
 }
-.curriculum-box{
+.curriculum-box {
   padding: 53px 40px 58px 40px;
 }
 #box1 {
@@ -200,7 +202,7 @@ hr {
     ),
     rgb(255, 255, 255);
 }
-.arrow-btn{
+.arrow-btn {
   border-radius: 50%;
   background: rgb(254, 163, 1);
   border: none;
@@ -212,10 +214,10 @@ hr {
   cursor: pointer;
   margin-right: 10px;
 }
-.arrow-btn-container{
+.arrow-btn-container {
   margin-bottom: 30px;
 }
-.marquee{
+.marquee {
   width: calc(100% - 2px);
   max-width: 1440px;
   margin-inline: auto;
@@ -234,17 +236,122 @@ hr {
     rgba(0, 0, 0, 0)
   );
 }
-.item{
+.item {
   display: inline-block;
   animation: marquee 10s linear infinite;
 }
-@keyframes marquee{
-  from{
-    transform: translateX(100%);
+@keyframes marquee {
+  from {
+    transform: translateX(100vw);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
+}
+
+/* stories section */
+.stories-section{
+  text-align: center;
+  background: url(./assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+}
+.stories-content h1{
+  color: rgb(0, 0, 0);
+  font-size: 2.875rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+.stories-box-container{
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+  "a a b c"
+  "a a d e";
+  justify-content: center;
+  margin-bottom: 8%;
+}
+#stories-box1{
+  grid-area: a;
+}
+#stories-box2{
+  grid-area: b;
+}
+#stories-box3{
+  grid-area: c;
+}
+#stories-box4{
+  grid-area: d;
+}
+#stories-box5{
+  grid-area: e;
+}
+.stories-box{
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+.stories-box img{
+  border-radius: 16px 16px 0 0 ;
+  width: 100%;
+}
+.stories-box-content{
+  padding-left: 30px;
+}
+.stories-box-content h1{
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.stories-box-content p{
+  color: rgb(102, 102, 102);
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 50px;
+  line-height: 28.76px;
+}
+.stories-box-content h3{
+  padding-bottom: 20px;
+}
+.date-btn{
+  border-radius: 47.93px;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway";
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 18px 10px 18px;
+  border: none;
+}
+#stories-box1 .date-btn{
+  background-color: rgb(60, 216, 232);
+  position: relative;
+  top: -3%;
+  right: -6%;
+}
+#stories-box2 .date-btn{
+  background-color: rgb(149, 178, 38);
+  position: relative;
+  top: -5%;
+  right: -8%;
+}
+#stories-box3 .date-btn{
+  background-color: rgb(93, 88, 240);
+  position: relative;
+  top: -6%;
+  right: -8%;
+}
+#stories-box4 .date-btn{
+  background-color: rgb(149, 178, 38);
+  position: relative;
+  top: -6%;
+  right: -8%;
+}
+#stories-box5 .date-btn{
+  background-color: rgb(149, 178, 38);
+  position: relative;
+  top: -6%;
+  right: -8%;
 }
 
 
@@ -260,10 +367,11 @@ hr {
 @media only screen and (max-width: 576px) {
   nav,
   .banner,
-  .curriculum-box-container {
+  .curriculum-box-container,
+  .stories-section {
     padding: 12px 16px;
   }
-  .curriculum-box-container{
+  .curriculum-box-container {
     flex-direction: column;
   }
   .banner {
@@ -278,7 +386,7 @@ hr {
   }
   .logo-container h2,
   .menu,
-  .arrow-btn-container{
+  .arrow-btn-container {
     display: none;
   }
   hr {
@@ -287,5 +395,16 @@ hr {
   .bar-icon {
     visibility: visible;
     font-size: 1.8rem;
+  }
+  #stories-box1{
+    display: none;
+  }
+  .stories-box-container{
+    grid-template-areas: 
+    "b c"
+    "d e";
+  }
+  .date-btn{
+    padding: 5px 9px 5px 9px;
   }
 }
